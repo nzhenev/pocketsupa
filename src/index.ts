@@ -1,15 +1,17 @@
 // src/index.ts
-import { PocketSupaClient, PocketSupaClientOptions } from "./client";
+import { PocketSupaClient } from "./client";
 
-// Совместимая сигнатура с оригинальным Supabase JS SDK
+/**
+ * Fully supabase-js compatible createClient function.
+ * Instantiates a PocketBase-backed drop-in supabase-js API.
+ */
 export function createClient(
   supabaseUrl: string,
   supabaseKey: string,
-  options?: PocketSupaClientOptions
+  options?: any
 ) {
-  // Возвращаем instance заменяющего клиента
   return new PocketSupaClient(supabaseUrl, supabaseKey, options);
 }
 
-// (в будущем здесь можно экспортировать типы, совместимые с supabase-js)
-export type { PocketSupaClientOptions } from "./client";
+// API compatibility: export SupabaseClient alias.
+export { PocketSupaClient as SupabaseClient };
