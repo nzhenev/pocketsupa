@@ -1,0 +1,40 @@
+{
+  "name": "pocketsupa",
+  "version": "0.1.0",
+  "description": "Drop-in Supabase JS client replacement, powered by PocketBase.",
+  "main": "src/index.ts",
+  "types": "types/supabase.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nzhenev/pocketsupa"
+  },
+  "author": "nzhenev",
+  "license": "MIT",
+  "keywords": [
+    "supabase",
+    "pocketbase",
+    "bun",
+    "orm",
+    "database",
+    "adapter",
+    "js",
+    "typescript"
+  ],
+  "homepage": "https://github.com/nzhenev/pocketsupa",
+  "files": [
+    "src/",
+    "types/",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
